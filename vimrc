@@ -162,3 +162,4 @@ let g:miniBufExplMapWindowNavArrows = 1
 nnoremap <silent> <F12> :A<CR>
 
 set bs=2
+set mouse=a
