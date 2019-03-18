@@ -18,6 +18,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline' | Plugin 'vim-airline/vim-airline-themes' " Status line"
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'gdbmgr'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Yggdroot/indentLine' " Indentation level"
@@ -156,6 +157,14 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 
+ "--------------------------------------------------------------------------------
+ " vim-gutentags
+ "--------------------------------------------------------------------------------
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
  "--------------------------------------------------------------------------------
  " A, c和h文件切换
  "--------------------------------------------------------------------------------
