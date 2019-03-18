@@ -17,6 +17,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline' | Plugin 'vim-airline/vim-airline-themes' " Status line"
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
+Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'gdbmgr'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Yggdroot/indentLine' " Indentation level"
