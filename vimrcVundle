@@ -16,12 +16,13 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline' | Plugin 'vim-airline/vim-airline-themes' " Status line"
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'mbbill/undotree'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'gdbmgr'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Yggdroot/indentLine' " Indentation level"
-Plugin 'bling/vim-bufferline' " Buffer line"
+"Plugin 'bling/vim-bufferline' " Buffer line"
 "Plugin 'kepbod/quick-scope' " Quick scope"
 
 " All of your Plugins must be added before the following line
