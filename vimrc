@@ -22,7 +22,8 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'gdbmgr'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Yggdroot/indentLine' " Indentation level"
-Plugin 'bling/vim-bufferline' " Buffer line"
+Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'bling/vim-bufferline' " Buffer line"
 "Plugin 'kepbod/quick-scope' " Quick scope"
 
 " All of your Plugins must be added before the following line
