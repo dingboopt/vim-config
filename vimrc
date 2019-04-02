@@ -35,11 +35,18 @@ let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 
 set guifont=Monospace\ 14
 
- set nu!             " 显示行号
+set nu!             " 显示行号
 
 syntax enable
 syntax on
 colorscheme desert
+
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 
 :set autowrite   " 自动保存
 
