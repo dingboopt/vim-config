@@ -32,6 +32,8 @@ filetype plugin indent on    " required
 
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+" turn off diagnostic info
+let g:ycm_show_diagnostics_ui = 0
 set completeopt-=preview
 set guifont=Monospace\ 14
 
