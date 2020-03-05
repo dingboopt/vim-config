@@ -4,10 +4,11 @@ set -x
 curDir="$(pwd)"
 
 echo ${curDir}
-apt-get install -y git ctags cscope  cmake   libncurses5-dev python-dev python3-dev libgtk-3-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev
+apt-get install -y  ctags cscope  cmake   libncurses5-dev python-dev python3-dev libgtk-3-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev
+update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 git clone https://github.com/vim/vim.git
 cd vim
-./configure --with-features=huge --with-x --enable-pythoninterp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python2.7/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
+./configure --with-features=huge --with-x --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.6/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
 coreNum="$(cat /proc/cpuinfo| grep 'processor'| wc -l)"
 make -j"${coreNum}"
 apt auto-remove -y vim-runtime vim
@@ -22,7 +23,7 @@ cp vim-config/vimrcVundle -rf ~/.vimrc
 vim +PluginInstall +qall
 
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --clang-completer
+python3.6 ./install.py --clang-completer
 
 cd "${curDir}"
 
