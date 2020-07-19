@@ -8,7 +8,7 @@ apt-get install -y  ctags cscope  cmake   libncurses5-dev python-dev python3-dev
 update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 git clone https://github.com/vim/vim.git
 cd vim
-./configure --with-features=huge --with-x --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3.6/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
+./configure --with-features=huge --with-x --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
 coreNum="$(cat /proc/cpuinfo| grep 'processor'| wc -l)"
 make -j"${coreNum}"
 apt auto-remove -y vim-runtime vim
@@ -23,7 +23,7 @@ cp vim-config/vimrcVundle -rf ~/.vimrc
 vim +PluginInstall +qall
 
 cd ~/.vim/bundle/YouCompleteMe
-python3.6 ./install.py --clang-completer
+python3 ./install.py --clang-completer
 
 cd "${curDir}"
 
