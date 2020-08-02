@@ -8,6 +8,7 @@ apt-get install -y  ctags cscope  cmake   libncurses5-dev python-dev python3-dev
 update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 git clone https://github.com/vim/vim.git
 cd vim
+git checkout v8.0.0000
 ./configure --with-features=huge --with-x --enable-python3interp --enable-rubyinterp --enable-luainterp --enable-perlinterp --with-python-config-dir=/usr/lib/python3/config/ --enable-gui=gtk2 --enable-cscope --prefix=/usr
 coreNum="$(cat /proc/cpuinfo| grep 'processor'| wc -l)"
 make -j"${coreNum}"
